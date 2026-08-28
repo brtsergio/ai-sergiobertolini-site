@@ -191,7 +191,11 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
 .step{border-top:1px solid rgba(60,253,254,.35);padding-top:22px}
 .step__n{font-family:Poppins,sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;color:var(--ciano);margin-bottom:14px}
 .step h3{font-size:22px;color:#fff;margin-bottom:10px}
-.step p{color:rgba(255,255,255,.78);font-size:15px;margin:0}
+.step p{color:rgba(255,255,255,.78);font-size:15px;margin:0 0 14px}
+.step p:last-child{margin-bottom:0}
+.step p.step__manifesto{font-style:italic;padding-left:14px;border-left:2px solid rgba(60,253,254,.5);color:rgba(255,255,255,.6)}
+.aifia-badge{float:right;margin:4px 0 28px 32px}
+@media(max-width:700px){.aifia-badge{float:none;margin:0 0 24px}}
 .pull{margin-top:64px;font-family:Poppins,sans-serif;font-weight:600;font-size:clamp(20px,2.6vw,28px);line-height:1.4;color:var(--ciano);max-width:24ch}
 .band:not(.band--dark) .pull{color:var(--blu)}
 /* ---- testimonianze ---- */
@@ -305,6 +309,27 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
 .collab a.collab__logo{display:inline-block;border-bottom:none;line-height:0}
 .collab a:not(.collab__logo){display:block;margin-top:4px}
 .partners a{display:flex;line-height:0}
+/* ---- citazione celebre di chiusura ---- */
+.famous{position:relative;max-width:900px;margin:0 auto;text-align:center;padding:6px 0}
+.famous>*{position:relative;z-index:1}
+.famous__mark{position:absolute;left:-10px;top:96px;z-index:0;
+  font-family:Poppins,sans-serif;font-weight:700;font-size:190px;line-height:1;
+  color:rgba(15,33,47,.09);pointer-events:none;-webkit-user-select:none;user-select:none}
+@media(max-width:900px){.famous__mark{display:none}}
+.famous__portrait{width:132px;height:132px;border-radius:50%;object-fit:cover;display:block;
+  margin:0 auto 32px;filter:grayscale(1);
+  box-shadow:0 0 0 4px var(--ghiaccio),0 0 0 6px var(--ciano),0 12px 32px rgba(15,33,47,.2)}
+@media(max-width:700px){.famous__portrait{width:104px;height:104px;margin-bottom:26px}}
+.famous__q{font-family:Poppins,sans-serif;font-weight:600;font-size:clamp(21px,3vw,32px);
+  line-height:1.35;color:var(--blu);margin:0 auto;max-width:30ch}
+.famous__q.famous__q--long{font-size:clamp(17px,2vw,21px);font-weight:500;line-height:1.55;max-width:62ch}
+.famous__rule{width:64px;height:3px;background:var(--ciano);border:0;margin:32px auto 24px}
+.famous figcaption .famous__who{font-family:Poppins,sans-serif;font-weight:700;font-size:15px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--blu);margin:0}
+.famous figcaption .famous__src{font-size:14px;color:var(--grigio);margin:7px 0 0}
+.famous__src a{color:var(--blu);text-decoration:underline}
+.famous figcaption .famous__it{font-size:15.5px;font-style:italic;color:var(--scuro);
+  max-width:62ch;margin:28px auto 0}
 
 /* ---- nav: sottomenu "Cosa faccio" + menu mobile (aggiunto 23/08/2026) ---- */
 .nav__links--desktop{display:flex}
@@ -394,7 +419,7 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
       <p class="hero__sub">Trovare un docente AI competente, aggiornato e capace di reggere un'aula eterogenea è più difficile di quanto sembri.</p>
     </div>
     <div class="hero__body">
-      <p>Collaboro già con società di formazione, academy aziendali, piattaforme e-learning e scuole — posso entrare anche nei vostri percorsi. Non porto un modulo generico riadattato: prima capisco il pubblico e il settore dei vostri clienti, poi calibro contenuti ed esempi — la stessa cosa che chiedete a un buon formatore quando lo mettete in aula con il vostro brand.</p>
+      <p>Collaboro già con società di formazione, academy aziendali, piattaforme e-learning e scuole — posso entrare anche nei vostri percorsi. Non porto un modulo generico: prima capisco il pubblico e il settore dei vostri clienti, poi calibro contenuti ed esempi — la stessa cosa che chiedete a un buon formatore quando lo mettete in aula con il vostro brand.</p>
       <div class="btn-row">
         <a class="btn btn--primary" href="contatti.html">Parliamone</a>
         <a class="btn btn--ghost" href="#collaborazioni">Guarda come collaboro</a>
@@ -427,33 +452,36 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
       <p class="lede">Il tema è caldo, il catalogo va arricchito, e le richieste dei clienti arrivano più veloci di quanto si trovino le persone giuste. Il problema di solito non è la scarsità di candidati — di profili che si dicono "esperti AI" ce ne sono anche troppi — è distinguere chi sa davvero usare questi strumenti da chi si è solo aggiornato su un webinar, e chi sa spiegarli in aula da chi li sa solo usare per sé.</p>
       <p>Competenza tecnica reale, capacità didattica comprovata, e la possibilità di calare i contenuti nel settore del cliente finale: quando questi tre elementi coincidono nella stessa persona, di solito è perché ha già lavorato in azienda, non solo studiato l'AI da fuori.</p>
     </div>
-    <p class="pull">"Il buon maestro è quello che permette all'allievo di superarlo."</p>
+    <p class="pull">«Mi hanno mandato dei ragazzini», mi ha detto un Direttore Marketing, a proposito di un corso di formazione AI tenuto da persone che sapevano tutto di tecnologia e zero di dinamiche aziendali.</p>
   </div>
 </section>
 
 <section class="band band--dark">
   <div class="wrap">
-    <p class="eyebrow">Cosa cercate in un formatore AI</p>
-    <h2 style="color:#fff">I tre criteri che, secondo <a href="https://www.aifia.it" target="_blank" rel="noopener" style="color:var(--ciano)">AIFIA</a> (Associazione Italiana Formatori di Intelligenza Artificiale), definiscono un vero formatore AI</h2>
-    <p class="lede">Sono criteri che condivido pienamente — infatti ne sono socio: per me non è un'etichetta da citare, è il metro con cui valuto anche il mio lavoro.</p>
-    <a href="https://www.aifia.it" target="_blank" rel="noopener" style="display:inline-block;line-height:0;border-radius:8px;overflow:hidden;margin:4px 0 28px">
+    <a class="aifia-badge" href="https://www.aifia.it/manifesto" target="_blank" rel="noopener" style="display:inline-block;line-height:0;border-radius:8px;overflow:hidden">
       <img src="assets/certificazioni/LogoAIFIA.jpg" alt="AIFIA — Associazione Italiana Formatori di Intelligenza Artificiale" style="height:64px;width:auto;display:block">
     </a>
+    <p class="eyebrow">Cosa cercate in un formatore AI</p>
+    <h2 style="color:#fff">I tre criteri del <a href="https://www.aifia.it/manifesto" target="_blank" rel="noopener" style="color:var(--ciano)">Manifesto AIFIA</a> per un vero formatore AI</h2>
+    <p class="lede">Sono criteri che condivido pienamente — infatti ne sono socio: per me non è un'etichetta da citare, è il metro con cui valuto anche il mio lavoro. Ecco i tre punti del Manifesto, e sotto ognuno la prova reale di come li applico.</p>
     <div class="steps">
       <div class="step">
         <div class="step__n">01</div>
-        <h3>Esperienza reale con gli strumenti</h3>
-        <p>La mia competenza sull'AI è nata dopo novembre 2022, sul campo: uso quotidiano di ChatGPT, Gemini, Claude e strumenti più verticali, con la stessa attenzione a limiti, bias e gestione dei dati che poi chiedo ai partecipanti dei miei corsi.</p>
+        <h3>Esperienza con strumenti IA</h3>
+        <p class="step__manifesto">«Conosce modelli linguistici, generatori d'immagini, automazioni e gli strumenti IA più performanti. Sa come dialogare con l'IA conversazionale. La sua conoscenza in materia è nata dopo novembre 2022 – quando ChatGPT ha aperto la porta a tutti. Capisce limiti, bias e gestione dei dati negli strumenti IA.»</p>
+        <p><strong>In pratica:</strong> la mia competenza sull'AI è nata proprio in quel momento, sul campo: uso quotidiano di ChatGPT, Gemini, Claude e strumenti più verticali, con la stessa attenzione a limiti, bias e gestione dei dati che poi chiedo ai partecipanti dei miei corsi.</p>
       </div>
       <div class="step">
         <div class="step__n">02</div>
-        <h3>Capacità di innovare</h3>
-        <p>L'AI cambia ogni mese: aggiorno materiali ed esempi in continuazione, invece di riproporre le slide di sei mesi fa.</p>
+        <h3>Capacità di innovazione</h3>
+        <p class="step__manifesto">«È un innovatore dentro, che non ha paura a sporcarsi le mani e provare continuamente soluzione nuove. L'IA cambia alla velocità della luce e continuerà a farlo, spinta da miliardi di investimenti. Una tale velocità di sviluppo non ha precedenti storici, e questo richiede estrema flessibilità: il formatore IA supera il concetto tradizionale di insegnamento (imparo all'università, poi insegno) e sa che per stare al passo con l'IA bisogna sperimentare ed aggiornarsi continuamente.»</p>
+        <p><strong>In pratica:</strong> l'AI cambia ogni mese: aggiorno materiali ed esempi in continuazione, invece di riproporre le slide di sei mesi fa.</p>
       </div>
       <div class="step">
         <div class="step__n">03</div>
-        <h3>Vocazione formativa vera</h3>
-        <p>Sono docente del Modulo 9 — AI Project Management &amp; Business Strategy nel Master di UNINFORM GROUP (Business School ISO 9001:2015, socia ASFOR) — un ente che mi ha già selezionato secondo i propri standard. Sono anche socio AIFIA e Project Management Professional certificato PMI.</p>
+        <h3>Vocazione formativa</h3>
+        <p class="step__manifesto">«In un mondo sovraccarico di informazioni, sa progettare percorsi chiari, motivare i discenti e facilitare un apprendimento responsabile ed etico. Affianca alle lezioni la pratica guidata, il coaching su prompt reali e la capacità di far emergere il pensiero critico, perché usare l'IA non significa spegnere il giudizio umano, ma potenziarlo.»</p>
+        <p><strong>In pratica:</strong> nei miei corsi alterno di continuo teoria e pratica, dentro percorsi didattici solidi e progressivi — il tutto senza fidarmi mai ciecamente di ciò che dice l'AI.</p>
       </div>
     </div>
   </div>
@@ -471,14 +499,13 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
         <div class="collab">
           <a class="collab__logo" href="https://adacademy.it/"><img src="assets/collaborazioni/LogoADConsulting.webp" alt="Logo Academy di AD Consulting" height="32"></a>
           <h4>Academy di AD Consulting — AI Literacy per l'intera popolazione aziendale</h4>
-          <p>Sono formatore AI per l'Academy di AD Consulting, dove tengo seminari e workshop di AI Literacy rivolti alla popolazione aziendale delle aziende clienti. L'obiettivo non è "un corso in più": è diffondere consapevolezza sull'intelligenza artificiale e trasformarla in un moltiplicatore diffuso della produttività, a ogni livello dell'organizzazione.</p>
-          <p>Un esempio concreto è "AI Wake Up Call", il seminario gratuito che ho tenuto per manager, imprenditori e decision maker nella sede di AD Consulting a Modena: una lettura lucida dell'AI generativa — opportunità, limiti e rischi, superando hype e timori infondati — per inquadrarla come leva organizzativa, non come tecnologia per soli tecnici.</p>
+          <p>Sono formatore AI per l'Academy di AD Consulting, dove tengo seminari e workshop di AI Literacy rivolti alla popolazione aziendale delle aziende clienti — per diffondere consapevolezza sull'AI a ogni livello dell'organizzazione. Un esempio concreto è "AI Wake Up Call", il seminario gratuito che ho tenuto per manager e decision maker nella sede di AD Consulting a Modena.</p>
           <a href="https://adcgroup.com/seminario-ai-wake-up-call/">Il seminario "AI Wake Up Call" →</a>
         </div>
         <div class="collab">
           <a class="collab__logo" href="https://interformhr.it/"><img src="assets/collaborazioni/LogoInterForm.png" alt="Logo InterformHR" height="32"></a>
           <h4>InterformHR — formazione finanziata</h4>
-          <p>Collaboro come formatore AI anche per conto di InterformHR, che consente alle aziende di accedere ai fondi per la formazione finanziata. Per chi gestisce un catalogo corsi, è un canale in più per proporre l'AI ai propri clienti senza che il costo sia l'ostacolo.</p>
+          <p>Collaboro come formatore AI anche per conto di InterformHR, che consente alle aziende di accedere ai fondi per la formazione finanziata.</p>
         </div>
         <div class="collab">
           <a class="collab__logo" href="https://www.star-t.it/"><img src="assets/collaborazioni/LogoStart-t.png" alt="Logo Star-T" height="32"></a>
@@ -514,7 +541,7 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
         <div class="collab">
           <a class="collab__logo" href="https://librazione.org/"><img src="assets/collaborazioni/LogoLibrazione.png" alt="Logo Librazione.org" height="32"></a>
           <h4>Librazione.org — progetto doposcuola con l'AI</h4>
-          <p>Con la cooperativa sociale Librazione di Ravenna coordino e gestisco il progetto doposcuola "Applichiamo 7.0" (2025) e "Applichiamoci 8.0" (2026), rivolto agli studenti dell'Istituto Bucci e Oriani di Faenza: un percorso extrascolastico per il miglioramento e l'evoluzione dell'app Informagiovani tramite strumenti di intelligenza artificiale. Un profilo diverso dagli altri — non è docenza in aula, ma coordinamento di progetto.</p>
+          <p>Con la cooperativa sociale Librazione di Ravenna ho coordinato e gestito il progetto doposcuola "Applichiamo 7.0" (2025) e "Applichiamoci 8.0" (2026), rivolto agli studenti dell'Istituto Bucci e Oriani di Faenza: un percorso extrascolastico per il miglioramento e l'evoluzione dell'app Informagiovani tramite strumenti di intelligenza artificiale. Un profilo diverso dagli altri — non docenza in aula, ma coordinamento di progetto.</p>
           <p>Il progetto è stato raccontato anche dalla stampa locale:</p>
           <a href="https://www.youtube.com/watch?v=VuKMlanugyc">Ravenna Web TV — Si rinnova l'App dell'Informagiovani: ora fruibile anche via web →</a>
           <a href="https://www.ilrestodelcarlino.it/ravenna/cronaca/informagiovani-gli-studenti-progettano-una-ef4f477d">il Resto del Carlino — Informagiovani, gli studenti progettano una nuova app →</a>
@@ -522,7 +549,7 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
         <div class="collab">
           <a class="collab__logo" href="https://www.node.coop/"><img src="assets/collaborazioni/LogoNodeCoop.jpg" alt="Logo Node Soc. Coop." height="32"></a>
           <h4>Node Soc. Coop. — formazione per le cooperative sociali</h4>
-          <p>Sono formatore AI anche per Node Soc. Coop., per cui ho tenuto diversi corsi di formazione di base sull'intelligenza artificiale generativa rivolti alle cooperative sociali che gestisce.</p>
+          <p>Sono formatore AI anche per Node Soc. Coop., per cui ho tenuto diversi corsi di formazione di base e avanzata sull'intelligenza artificiale generativa rivolti alle cooperative sociali che gestisce.</p>
         </div>
       </div>
     </div>
@@ -565,6 +592,21 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
       <details><summary>Come si comincia?</summary>
         <p>Con un primo confronto, senza impegno: parliamo del vostro catalogo, del pubblico che avete in mente, e capiamo insieme se e come inserirmi nei vostri percorsi.</p></details>
     </div>
+  </div>
+</section>
+
+<section class="band band--ice" id="citazione">
+  <div class="wrap">
+    <figure class="famous">
+      <span class="famous__mark" aria-hidden="true">&ldquo;</span>
+      <img class="famous__portrait" style="filter:none" src="assets/citazioni/anonimo-sapere-trasmettere.svg" alt="Illustrazione simbolica di un'idea che fatica a essere comunicata" width="132" height="132" loading="lazy">
+      <blockquote class="famous__q">Sapere le cose non significa necessariamente saperle trasmettere.</blockquote>
+      <figcaption>
+        <hr class="famous__rule">
+        <p class="famous__who">Anonimo</p>
+        <p class="famous__src">Autore non identificato</p>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
