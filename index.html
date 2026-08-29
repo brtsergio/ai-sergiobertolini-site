@@ -118,6 +118,7 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
 .hero__sub{font-family:Poppins,sans-serif;font-weight:600;font-size:clamp(19px,2.2vw,24px);line-height:1.35;color:var(--ciano);margin:22px 0 0;max-width:70ch}
 .hero__body::after{content:"";display:table;clear:both}
 .hero__body p{color:rgba(255,255,255,.85);max-width:52ch}
+.hero__mission{font-weight:700;color:#fff}
 .hero__body>p:first-of-type{margin-top:0}
 .hero__place{aspect-ratio:16/9;background:
    repeating-linear-gradient(45deg,rgba(255,255,255,.04) 0 12px,transparent 12px 24px),#16293a;
@@ -267,6 +268,26 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
 .nav__links--mobile .nav__drop{position:static}
 .nav__links--mobile .nav__drop>summary{padding:14px 4px}
 .nav__links--mobile .nav__submenu{position:static;box-shadow:none;border:none;background:rgba(255,255,255,.04);border-radius:8px;margin:0 0 8px}
+
+/* citazione celebre di chiusura pagina (grafica diversa dai testimonial) */
+.famous{position:relative;max-width:900px;margin:0 auto;text-align:center;padding:6px 0}
+.famous>*{position:relative;z-index:1}
+.famous__mark{position:absolute;left:-10px;top:96px;z-index:0;
+  font-family:Poppins,sans-serif;font-weight:700;font-size:190px;line-height:1;
+  color:rgba(15,33,47,.09);pointer-events:none;-webkit-user-select:none;user-select:none}
+@media(max-width:900px){.famous__mark{display:none}}
+.famous__portrait{width:132px;height:132px;border-radius:50%;object-fit:cover;display:block;
+  margin:0 auto 32px;filter:grayscale(1);
+  box-shadow:0 0 0 4px var(--ghiaccio),0 0 0 6px var(--ciano),0 12px 32px rgba(15,33,47,.2)}
+@media(max-width:700px){.famous__portrait{width:104px;height:104px;margin-bottom:26px}}
+.famous__q{font-family:Poppins,sans-serif;font-weight:600;font-size:clamp(21px,3vw,32px);
+  line-height:1.35;color:var(--blu);margin:0 auto;max-width:30ch}
+.famous__rule{width:64px;height:3px;background:var(--ciano);border:0;margin:32px auto 24px}
+.famous figcaption .famous__who{font-family:Poppins,sans-serif;font-weight:700;font-size:15px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--blu);margin:0}
+.famous figcaption .famous__src{font-size:14px;color:var(--grigio);margin:7px 0 0}
+.famous figcaption .famous__it{font-size:15.5px;font-style:italic;color:var(--scuro);
+  max-width:62ch;margin:28px auto 0}
 </style>
 </head>
 <body>
@@ -330,6 +351,7 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
         <img src="assets/foto/workshop-san-geminiano.webp" alt="Sergio Bertolini durante il workshop operativo AI per i soci di San Geminiano" width="1714" height="964">
         <span class="hero__place-tag">Workshop operativo San Geminiano</span>
       </div>
+      <p class="hero__mission">Aiuto le persone a conoscere e sfruttare il potenziale dell'intelligenza artificiale.</p>
       <p>Ti accompagno dal primo seminario di consapevolezza fino alla roadmap di integrazione dell'AI nel tuo lavoro quotidiano — aziende, scuole e professionisti, da Ferrara in tutta Italia, in aula o da remoto.</p>
 
       <div class="prompt" aria-hidden="true">
@@ -502,6 +524,21 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
       <details><summary>I contenuti sono uguali per tutti o su misura?</summary>
         <p>Su misura. Prima studio il contesto — settore, ruoli, problemi reali — poi scelgo contenuti ed esempi. Gli esempi arrivano dal lavoro quotidiano dei partecipanti, e spesso emergono durante il corso stesso.</p></details>
     </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <figure class="famous">
+      <span class="famous__mark" aria-hidden="true">&ldquo;</span>
+      <img class="famous__portrait" src="assets/foto/sergio-bertolini-ritratto.webp" alt="Ritratto di Sergio Bertolini" width="520" height="520" loading="lazy">
+      <blockquote class="famous__q">Immagino un mondo in cui l'AI sia uno strumento accessibile e strategico per tutti, dallo stagista al CEO, dallo studente al pensionato.</blockquote>
+      <figcaption>
+        <hr class="famous__rule">
+        <p class="famous__who">Sergio Bertolini</p>
+        <p class="famous__src">AI Consultant &amp; Trainer</p>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
