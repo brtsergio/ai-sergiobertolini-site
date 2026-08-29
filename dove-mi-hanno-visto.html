@@ -126,6 +126,23 @@
       "description": "Seminario pubblico sulle capacità dell'AI generativa di creare e analizzare immagini, con esempi dal vivo.",
       "image": "https://ai.sergiobertolini.com/assets/public-speaking/voghiera-dal-testo-allimmagine.webp",
       "url": "https://www.estense.com/2024/1067436/seminario-intelligenza-artificiale-dal-testo-allimmagine-e-ritorno/"
+    },
+    {
+      "@type": "Quotation",
+      "@id": "https://ai.sergiobertolini.com/dove-mi-hanno-visto.html#quote-feynman",
+      "text": "The prize is the pleasure of finding the thing out, the kick in the discovery, the observation that other people use it.",
+      "creator": {
+        "@type": "Person",
+        "name": "Richard Feynman",
+        "jobTitle": "Fisico, Premio Nobel per la Fisica 1965",
+        "sameAs": "https://en.wikipedia.org/wiki/Richard_Feynman"
+      },
+      "isPartOf": {
+        "@type": "CreativeWork",
+        "name": "The Pleasure of Finding Things Out",
+        "datePublished": "1981",
+        "publisher": {"@type": "Organization", "name": "BBC"}
+      }
     }
   ]
 }
@@ -350,6 +367,26 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
 .nav__links--mobile .nav__drop{position:static}
 .nav__links--mobile .nav__drop>summary{padding:14px 4px}
 .nav__links--mobile .nav__submenu{position:static;box-shadow:none;border:none;background:rgba(255,255,255,.04);border-radius:8px;margin:0 0 8px}
+
+/* citazione celebre di chiusura pagina (grafica diversa dai testimonial) */
+.famous{position:relative;max-width:900px;margin:0 auto;text-align:center;padding:6px 0}
+.famous>*{position:relative;z-index:1}
+.famous__mark{position:absolute;left:-10px;top:96px;z-index:0;
+  font-family:Poppins,sans-serif;font-weight:700;font-size:190px;line-height:1;
+  color:rgba(15,33,47,.09);pointer-events:none;-webkit-user-select:none;user-select:none}
+@media(max-width:900px){.famous__mark{display:none}}
+.famous__portrait{width:132px;height:132px;border-radius:50%;object-fit:cover;display:block;
+  margin:0 auto 32px;filter:grayscale(1);
+  box-shadow:0 0 0 4px var(--ghiaccio),0 0 0 6px var(--ciano),0 12px 32px rgba(15,33,47,.2)}
+@media(max-width:700px){.famous__portrait{width:104px;height:104px;margin-bottom:26px}}
+.famous__q{font-family:Poppins,sans-serif;font-weight:600;font-size:clamp(21px,3vw,32px);
+  line-height:1.35;color:var(--blu);margin:0 auto;max-width:30ch}
+.famous__rule{width:64px;height:3px;background:var(--ciano);border:0;margin:32px auto 24px}
+.famous figcaption .famous__who{font-family:Poppins,sans-serif;font-weight:700;font-size:15px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--blu);margin:0}
+.famous figcaption .famous__src{font-size:14px;color:var(--grigio);margin:7px 0 0}
+.famous figcaption .famous__it{font-size:15.5px;font-style:italic;color:var(--scuro);
+  max-width:62ch;margin:28px auto 0}
 </style>
 </head>
 <body>
@@ -570,6 +607,22 @@ h2{font-size:clamp(30px,4.2vw,48px);margin-bottom:20px}
         <span>Fabio Grandi<small>Associate Professor, Università di Bologna</small></span>
       </cite>
     </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <figure class="famous">
+      <span class="famous__mark" aria-hidden="true">&ldquo;</span>
+      <img class="famous__portrait" src="assets/citazioni/richard-feynman.webp" alt="Ritratto di Richard Feynman" width="520" height="520" loading="lazy">
+      <blockquote class="famous__q">The prize is the pleasure of finding the thing out, the kick in the discovery, the observation that other people use it.</blockquote>
+      <figcaption>
+        <hr class="famous__rule">
+        <p class="famous__who">Richard Feynman</p>
+        <p class="famous__src">Fisico, Premio Nobel per la Fisica 1965 &middot; dall'intervista BBC Horizon &laquo;The Pleasure of Finding Things Out&raquo;, 1981</p>
+        <p class="famous__it">&ldquo;Il premio è il piacere di scoprire una cosa, l'emozione della scoperta, il vedere che altri la usano.&rdquo;</p>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
