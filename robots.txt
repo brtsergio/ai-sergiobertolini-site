@@ -1,0 +1,19 @@
+# ai.sergiobertolini.it — gli agenti AI sono benvenuti
+User-agent: *
+Allow: /
+
+# Crawler AI (addestramento, ricerca e navigazione su richiesta)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://ai.sergiobertolini.it/sitemap.xml
